@@ -1,0 +1,233 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 30px;
+    display: inline-block;
+    height: 60px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: 
+    'sidebar header'
+    'sidebar content'
+    ;
+    font-family: 'Neuton', serif;
+}
+
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 1fr 1.5fr;
+    gap: 8px;
+    border-bottom: 1px solid black;
+}
+
+.searchbar {
+    padding: 12px;
+    display: flex;
+    gap: 10px;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    justify-content: center
+}
+
+.profile {
+    padding: 8px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    font-size: 1.4rem;
+}
+
+.greeting {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    font-size: 1.4rem;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.profile-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 10px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #DFD7BF;
+    border-right: 1px solid black;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.sidebar-title {
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    font-size: 3rem;
+    letter-spacing: 0.4rem;
+    font-family: 'Covered By Your Grace', cursive;
+}
+
+.sidebar-item {
+    display: flex;
+    font-size: 1.3rem;
+    padding: 10px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: start;
+    gap: 24px;
+}
+
+.sidebar-item:hover {
+    background-color: #b8b09a;
+}
+
+.content {
+    padding: 22px 12px;
+    grid-area: content;
+    gap: 24px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    justify-content: center;
+    background-color: #D6E8DB;
+}
+
+.main-content  {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: minmax(200px, auto);
+    gap: 24px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid black;
+    padding: 0px;
+    font-size: calc(3% + 18px);
+    background-color: #F5F5F5;
+    box-shadow: -7px 0px 4px #73A9AD, 10px 10px 10px #b2c0b6;
+}
+
+.main-content .card:hover {
+    transform: scale(1.01);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    height: 100%;
+}
+
+.card-content p:nth-child(2) {
+    height: 80%;
+}
+
+.card .title {
+    margin-top: 10px;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    font-size: 1.4rem;
+}
+
+.card-icons {
+    display: flex;
+    justify-content: end;
+    gap: 12px;
+    margin-right: 10px;
+}
+
+.side-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 50px;
+}
+
+.side-content .card {
+    max-width: 300px;
+    justify-items: center;
+    padding: 8px;
+}
+
+.side-content .in-card {
+    padding: 8px;
+}
+
+.prof {
+    display: flex;
+    align-items: center;
+    font-size: calc(3% + 14px);
+    gap: 12px;
+    margin-left: 8px;
+}
+
+.profis {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.profile-pic {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 40px;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    object-fit: cover;
+}
+
+input {
+    border-radius: 40px;
+    border: none;
+    background: lightgray;
+    height: 40%;
+    width: 70%;
+}
+
+button {
+    border: none;
+    border-radius: 30px;
+    width: 100px;
+    color: white;
+    font-weight: bold;
+    background: rgb(110, 187, 110);
+    padding: 12px;
+}
+
+button:hover, .name:hover, .profile-pic img {
+    cursor: pointer;
+}
+
+hr {
+    margin: 4px;
+}
